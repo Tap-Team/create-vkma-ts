@@ -11,7 +11,7 @@ const PopoutTemplate = () => {
       actions={[
         {
           title: 'Окей',
-          autoclose: true,
+          autoClose: true,
           mode: 'default',
         },
       ]}
