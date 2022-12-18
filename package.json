@@ -1,0 +1,24 @@
+{
+  "name": "@tap_team/create-vkma-ts",
+  "version": "1.0.0",
+  "description": "generate vk mini app with typescript and @happysanta modules support",
+  "main": "bin/create-vk-mini-app.js",
+  "bin": {
+    "create-vkma-ts": "./bin/create-vkma-ts.js"
+  },
+  "scripts": {
+    "create": "node ./bin/create-vkma-ts.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "author": {
+    "name": "Tap_Team",
+    "url": "https://vk.com/tap_team_studio"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "4.1.2",
+    "fs-extra": "^11.1.0"
+  }
+}
