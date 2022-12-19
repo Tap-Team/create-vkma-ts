@@ -40,4 +40,4 @@ Go to created folder and run:
 `yarn run build` or `npm run build` to build production bundle, with tree-shaking, uglify and all this modern fancy stuff.
 
 [npm]: https://img.shields.io/npm/v/@tap_team/create-vkma-ts.svg
-[npm-url]: https://npmjs.com/package/@tap_team//create-vkma-ts
+[npm-url]: https://npmjs.com/package/@tap_team/create-vkma-ts
