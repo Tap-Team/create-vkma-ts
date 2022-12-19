@@ -4,7 +4,7 @@ import { useRouter } from "@happysanta/router";
 import {BridgePlus} from "@happysanta/bridge-plus";
 import {PAGE_MAIN} from '../../router';
 
-const Main: React.FC<{id: string}> = ({id}): JSX.Element => {
+const Onboarding: React.FC<{id: string}> = ({id}): JSX.Element => {
 
   const router = useRouter()
 
@@ -35,4 +35,4 @@ const Main: React.FC<{id: string}> = ({id}): JSX.Element => {
   );
 };
 
-export default Main;
+export default Onboarding;
