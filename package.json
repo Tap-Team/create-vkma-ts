@@ -1,6 +1,6 @@
 {
   "name": "@tap_team/create-vkma-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "generate vk mini app with typescript and @happysanta modules support",
   "main": "bin/create-vk-mini-app.js",
   "bin": {
