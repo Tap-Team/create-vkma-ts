@@ -1,0 +1,10 @@
+node_modules
+.idea
+.DS_Store
+.env
+.eslintrc
+.eslintignore
+.browserslistrc
+.stylelintrc
+.gitignore
+*.log
