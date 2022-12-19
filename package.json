@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "generate vk mini app with typescript and @happysanta modules support",
   "main": "bin/create-vk-mini-app.js",
+  "repository": "https://github.com/Tap-Team/create-vkma-ts",
   "bin": {
     "create-vkma-ts": "./bin/create-vkma-ts.js"
   },
