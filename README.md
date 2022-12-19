@@ -1,4 +1,4 @@
-# Create VK Mini App with TypeScript [![npm][npm]][npm-url] [![deps][deps]][deps-url]
+# Create VK Mini App with TypeScript [![npm][npm]][npm-url]
 
 ## How to use
 
@@ -39,8 +39,5 @@ Go to created folder and run:
 
 `yarn run build` or `npm run build` to build production bundle, with tree-shaking, uglify and all this modern fancy stuff.
 
-[npm]: https://img.shields.io/npm/v/@vkontakte/create-vk-mini-app.svg
-[npm-url]: https://npmjs.com/package/@vkontakte/create-vk-mini-app
-
-[deps]: https://img.shields.io/david/vkcom/create-vk-mini-app.svg
-[deps-url]: https://david-dm.org/vkcom/create-vk-mini-app
+[npm]: https://img.shields.io/npm/v/@tap_team/create-vkma-ts.svg
+[npm-url]: https://npmjs.com/package/@tap_team//create-vkma-ts
