@@ -29,25 +29,16 @@ const generateFiles = (dependenciesNames) => {
   fs.mkdirSync(root + "/templates/dist/");
   fs.mkdirSync(root + "/templates/dist/src/");
   fse.copySync(root + "/templates/base", root + "/templates/dist");
+
   fs.writeFileSync(
-    root + "/templates/dist/index.tsx",
+    root + "/templates/dist/src/index.tsx",
     generate_indextsx(dependenciesNames),
-    { flag: "wx" },
-    (err) => {
-      if (err) {
-        console.log(chalk.red(err));
-      }
-    }
+    { flag: "wx"},
   );
   fs.writeFileSync(
     root + "/templates/dist/src/App.tsx",
     generate_apptsx(dependenciesNames),
     { flag: "wx" },
-    (err) => {
-      if (err) {
-        console.log(chalk.red(err));
-      }
-    }
   );
 
   if (dependenciesNames.indexOf("eruda") !== -1) {
