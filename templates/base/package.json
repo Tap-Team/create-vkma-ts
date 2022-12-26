@@ -20,9 +20,20 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-react": "^7.18.6",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.30.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "prettier": "2.8.1",
     "react-hot-loader": "^4.13.0",
     "react-scripts": "^4.0.3",
     "typescript": "^4.8.3"
@@ -33,7 +44,18 @@
     "predeploy": "npm run build",
     "deploy": "vk-miniapps-deploy",
     "deploy-without-build": "vk-miniapps-deploy",
-    "tunnel": "vk-tunnel --insecure=1 --http-protocol=https --ws-protocol=wss --host=localhost --port=10888"
+    "tunnel": "vk-tunnel --insecure=1 --http-protocol=https --ws-protocol=wss --host=localhost --port=10888",
+    "lint": "eslint --ext .tsx,.ts .",
+    "lint:write": "eslint --ext .tsx,.ts . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint:write"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write --ignore-unknown"
   },
   "eslintConfig": {
     "extends": [

@@ -29,7 +29,8 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    "base/src/**/*",
-    "declare.d.ts"
+    "./src/**/*",
+    "declare.d.ts",
+    "./.eslintrc.json"
   ]
 }

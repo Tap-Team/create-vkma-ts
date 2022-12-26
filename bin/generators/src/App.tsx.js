@@ -85,6 +85,7 @@ const App = (): JSX.Element => {
           : "const onboardingIsShowed = await bridge.send('VKWebAppStorageGet', {\n" +
             '         keys: ["ONBOARDING_IS_SHOWED"]})\n'
       }
+      // @ts-ignore
       if (onboardingIsShowed !== \"true\") {
         ${
           dependencies.indexOf("@happysanta/router") !== -1
