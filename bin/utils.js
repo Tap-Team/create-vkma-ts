@@ -55,6 +55,8 @@ const generateFiles = (dependenciesNames) => {
     );
   }
 
+  fs.mkdirSync(root + "/templates/dist/src/panels/onboarding");
+
   fs.writeFileSync(
     root + "/templates/dist/src/panels/onboarding/Onboarding.tsx",
     generate_onboardingtsx(dependenciesNames),
