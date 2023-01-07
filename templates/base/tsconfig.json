@@ -30,7 +30,6 @@
   },
   "include": [
     "./src/**/*",
-    "declare.d.ts",
-    "./.eslintrc.json"
+    "declare.d.ts"
   ]
 }
