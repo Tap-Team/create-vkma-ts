@@ -1,4 +1,4 @@
-import * as eruda from "bin/generators/eruda";
+import * as eruda from "eruda";
 import * as erudaDom from "eruda-dom";
 
 eruda.init();

@@ -45,7 +45,7 @@ document.getElementById('root'));
 ${
   dependencies.indexOf("eruda") !== -1
     ? `if (process.env.NODE_ENV === 'development') {
-  import('../../../bin/generators/eruda').then(({default: eruda}) => {
+  import('./eruda').then(({default: eruda}) => {
 })} // runtime download`
     : ""
 }
