@@ -10,7 +10,7 @@
     "@vkontakte/vk-bridge": "2.7.2",
     "@vkontakte/vk-miniapps-deploy": "0.0.26",
     "@vkontakte/vkjs": "0.30.0",
-    "@vkontakte/vkui": "5.0.2",
+    "@vkontakte/vkui": "5.0.3",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "rollup": "^3.7.5",
