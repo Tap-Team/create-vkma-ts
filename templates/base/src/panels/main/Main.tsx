@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Div, Panel, PanelHeader, Text } from "@vkontakte/vkui";
+import { Div, Panel, PanelHeader, Text } from "@vkontakte/vkui";
 
 const Main: React.FC<{id: string}> = ({id}): JSX.Element => {
 
