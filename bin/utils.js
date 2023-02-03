@@ -26,9 +26,43 @@ const addScripts = (file, isReactScripts) => {
   return file;
 };
 
+// PHELG - prettier + husky + editorconfig + lint-staged
+const addPHELG = (file) => {
+  const root = path.resolve(__dirname, "../");
+  file.scripts = {
+    ...file.scripts,
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,css,scss,md} --ignore-unknown"
+  }
+  file["lint-staged"] = {
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write --ignore-unknown"
+  }
+  
+  fs.copyFileSync(
+    root + "/bin/generators/.prettierrc.json",
+    root + "/templates/dist/.prettierrc.json"
+  );
+  
+  try {
+    fs.mkdirSync(root + "/templates/dist/.husky");
+  } catch (e) {}
+  fs.copyFileSync(
+    root + "/bin/generators/.husky/pre-commit",
+    root + "/templates/dist/.husky/pre-commit"
+  );
+  
+  fs.copyFileSync(
+    root + "/bin/generators/.editorconfig",
+    root + "/templates/dist/.editorconfig"
+  );
+  
+  return file;
+}
+
 const addDependencies = (file, dependencies) => {
   dependencies.forEach((dependence) => {
-    if (dependence["eruda"]) {
+    if (dependence["eruda"] || dependence["prettier+husky+editorconfig+lint-staged"]) {
       file.devDependencies = {
         ...file.devDependencies,
         ...dependence,
@@ -106,6 +140,7 @@ const generateFiles = (dependenciesNames, isReactScripts) => {
 
 module.exports = {
   addScripts,
+  addPHELG,
   addDependencies,
   generateFiles,
 };

@@ -6,7 +6,7 @@ const fs_extra = require("fs-extra");
 const fs = require("fs");
 const path = require("path");
 const constants = require("./constants");
-const { addDependencies, generateFiles, addScripts} = require("./utils");
+const { addDependencies, generateFiles, addScripts, addPHELG} = require("./utils");
 const { execSync } = require("child_process");
 
 console.log(__dirname);
@@ -90,6 +90,9 @@ const start = async () => {
     )
   );
   generateFiles(usedPackagesNames, whatUse);
+  if (usedPackagesNames.indexOf("prettier+husky+editorconfig+lint-staged") !== -1) {
+    appPackageJson = addPHELG(appPackageJson)
+  }
   fs.writeFileSync(
     path.join(__dirname, "../templates/dist/package.json"),
     JSON.stringify(appPackageJson, null, 2)
