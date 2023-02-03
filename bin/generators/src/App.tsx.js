@@ -36,7 +36,7 @@ import Onboarding from './panels/onboarding/Onboarding';
 import {AppearanceType} from '@vkontakte/vk-bridge';
 
 const App = (): JSX.Element => {
-  const [appearance, setAppearance] = useState('light')
+  const [appearance, setAppearance] = useState<AppearanceType>('light')
   ${
     dependencies.indexOf("@happysanta/router") !== -1
       ? ""
@@ -99,7 +99,7 @@ const App = (): JSX.Element => {
   }, [])
 
   return (
-    <ConfigProvider appearance={appearance as AppearanceType} platform={platform}>
+    <ConfigProvider appearance={appearance} platform={platform}>
       <AdaptivityProvider>
         <AppRoot>
           <SplitLayout>
