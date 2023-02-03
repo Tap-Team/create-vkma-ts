@@ -1,7 +1,8 @@
 import React from 'react';
 import { Div, Panel, PanelHeader, Text } from "@vkontakte/vkui";
+import { BasePanel } from '../../types/base';
 
-const Main: React.FC<{id: string}> = ({id}): JSX.Element => {
+const Main: React.FC<BasePanel> = ({id}): JSX.Element => {
 
   return (
     <Panel id={id}>
