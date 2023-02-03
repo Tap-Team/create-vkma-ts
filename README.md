@@ -2,38 +2,15 @@
 
 ### Zero-config CLI generator for TypeScript VK mini app development.
 
+![](readme/demo.gif)
+
 ## How to use
 
 ### With NPX
 
 ```bash
-npx @tap_team/create-vkma-ts
+npx @tap_team/create-vkma-ts@latest
 ```
-
-[NPX](https://github.com/npm/npx) allows you to always use the **latest** version of the package without a global installation.
-
-### With installing the package globally
-
-Install the package globally via yarn
-
-```bash
-yarn global add @tap_team/create-vkma-ts
-```
-
-...or npm
-
-```bash
-npm install --global @tap_team/create-vkma-ts
-```
-
-and use as follows
-
-```bash
-create-vkma-ts
-```
-
-This way is less recommended because you will have to update the package yourself.
-
 
 ## How to start work with app
 

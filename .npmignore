@@ -8,5 +8,5 @@ node_modules
 .stylelintrc
 /.gitignore
 *.log
-.github
 .npmignore
+readme
