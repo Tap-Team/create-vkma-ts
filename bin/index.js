@@ -2,15 +2,15 @@
 
 const { Confirm, Input, Select, MultiSelect } = require("enquirer");
 const chalk = require("chalk");
-const fs = require("fs-extra");
-const ffs = require("fs");
+const fs_extra = require("fs-extra");
+const fs = require("fs");
 const path = require("path");
 const constants = require("./constants");
 const { addDependencies, generateFiles } = require("./utils");
 const { execSync } = require("child_process");
 
 console.log(__dirname);
-let appPackageJson = fs.readJsonSync(
+let appPackageJson = fs_extra.readJsonSync(
   path.resolve(__dirname, constants.packageJson)
 );
 
@@ -35,7 +35,7 @@ const start = async () => {
   const useThisPath = await useThisPathPrompt.run();
 
   const appNamePrompt = new Input({
-    name: "useThisPath",
+    name: "appNamePrompt",
     message: "Enter app name",
     initial: "my-app",
   });
@@ -43,7 +43,7 @@ const start = async () => {
   appPackageJson.name = appName;
   const projectPath = useThisPath ? "./" : "./" + appName;
   if (!useThisPath) {
-    fs.mkdirSync(projectPath);
+    fs_extra.mkdirSync(projectPath);
   }
   console.log(
     chalk.yellow(
@@ -95,14 +95,14 @@ const start = async () => {
     )
   );
   generateFiles(usedPackagesNames);
-  ffs.writeFileSync(
+  fs.writeFileSync(
     path.join(__dirname, "../templates/dist/package.json"),
     JSON.stringify(appPackageJson, null, 2)
   );
   console.log(chalk.green("Files generated successfully"));
   console.log(chalk.yellow("Copying files..."));
-  fs.copySync(path.join(__dirname, "../templates/dist"), projectPath);
-  ffs.rmSync(path.join(__dirname, "../templates/dist"), {
+  fs_extra.copySync(path.join(__dirname, "../templates/dist"), projectPath);
+  fs.rmSync(path.join(__dirname, "../templates/dist"), {
     recursive: true,
     force: true,
   });
