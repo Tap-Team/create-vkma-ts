@@ -58,7 +58,7 @@ const start = async () => {
   const usedPackageManagerPrompt = new Select({
     name: "usedPackageManager",
     message: "Which package manager do you want to use?",
-    choices: ["npm", "yarn"],
+    choices: ["npm", "yarn", "pnpm"],
   });
   const usedPackageManager = await usedPackageManagerPrompt.run();
 
