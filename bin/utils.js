@@ -43,7 +43,7 @@ const addDependencies = (file, dependencies) => {
   return file;
 };
 
-const generateFiles = (dependenciesNames) => {
+const generateFiles = (dependenciesNames, isReactScripts) => {
   const root = path.resolve(__dirname, "../");
   fs.mkdirSync(root + "/templates/dist/");
   fs.mkdirSync(root + "/templates/dist/src/");
@@ -76,9 +76,7 @@ const generateFiles = (dependenciesNames) => {
 
   try {
     fs.mkdirSync(root + "/templates/dist/src/panels/onboarding");
-  } catch (e) {
-    
-  }
+  } catch (e) {}
   fs.writeFileSync(
     root + "/templates/dist/src/panels/onboarding/Onboarding.tsx",
     generate_onboardingtsx(dependenciesNames),
@@ -89,6 +87,21 @@ const generateFiles = (dependenciesNames) => {
       }
     }
   );
+  
+  if (isReactScripts) {
+    try {
+      fs.mkdirSync(root + "/templates/dist/public");
+    } catch (e) {}
+    fs.copyFileSync(
+      root + "/bin/generators/public/index.html",
+      root + "/templates/dist/public/index.html"
+    );
+  } else {
+    fs.copyFileSync(
+      root + "/bin/generators/index.html",
+      root + "/templates/dist/index.html"
+    );
+  }
 };
 
 module.exports = {

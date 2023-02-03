@@ -89,7 +89,7 @@ const start = async () => {
       "Generating files with specified modules — it might take a some time..."
     )
   );
-  generateFiles(usedPackagesNames);
+  generateFiles(usedPackagesNames, whatUse);
   fs.writeFileSync(
     path.join(__dirname, "../templates/dist/package.json"),
     JSON.stringify(appPackageJson, null, 2)
