@@ -6,6 +6,7 @@ node_modules
 .eslintignore
 .browserslistrc
 .stylelintrc
-.gitignore
+/.gitignore
 *.log
 .github
+.npmignore
