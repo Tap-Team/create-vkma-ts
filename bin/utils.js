@@ -7,6 +7,25 @@ const { generate_apptsx } = require("./generators/src/App.tsx");
 const {
   generate_onboardingtsx,
 } = require("./generators/src/panels/onboarding/Onboarding.tsx");
+
+const addScripts = (file, isReactScripts) => {
+  if (isReactScripts) {
+    file.scripts = {
+      "start": "cross-env PORT=10888 react-scripts start",
+      "build": "react-scripts build",
+      ...file.scripts,
+    }
+  } else {
+    file.scripts = {
+      "start": "vite",
+      "build": "tsc && vite build",
+      "preview": "vite preview",
+      ...file.scripts,
+    }
+  }
+  return file;
+};
+
 const addDependencies = (file, dependencies) => {
   dependencies.forEach((dependence) => {
     if (dependence["eruda"]) {
@@ -55,8 +74,11 @@ const generateFiles = (dependenciesNames) => {
     );
   }
 
-  fs.mkdirSync(root + "/templates/dist/src/panels/onboarding");
-
+  try {
+    fs.mkdirSync(root + "/templates/dist/src/panels/onboarding");
+  } catch (e) {
+    
+  }
   fs.writeFileSync(
     root + "/templates/dist/src/panels/onboarding/Onboarding.tsx",
     generate_onboardingtsx(dependenciesNames),
@@ -70,6 +92,7 @@ const generateFiles = (dependenciesNames) => {
 };
 
 module.exports = {
+  addScripts,
   addDependencies,
   generateFiles,
 };

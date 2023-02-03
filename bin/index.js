@@ -61,8 +61,15 @@ const start = async () => {
     choices: ["npm", "yarn", "pnpm"],
   });
   const usedPackageManager = await usedPackageManagerPrompt.run();
+  
+  const whatUsePrompt = new Toggle({
+    message: 'What use?',
+    enabled: 'react-scripts',
+    disabled: 'vite'
+  });
+  const whatUse = await whatUsePrompt.run();
+  appPackageJson = addScripts(appPackageJson, whatUse);
 
-  // TODO: move packages to another file
   const usedPackagesPrompt = new MultiSelect({
     name: "usedPackages",
     message: "What packages do you want to use?",

@@ -4,4 +4,11 @@ import { viteSingleFile } from "vite-plugin-singlefile"
 
 export default defineConfig({
   plugins: [react(), viteSingleFile()],
+  build: {
+    rollupOptions: {
+      input: {
+        app: './public/index.html', // default
+      },
+    },
+  },
 })
