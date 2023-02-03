@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-const { Confirm, Input, Select, MultiSelect } = require("enquirer");
+const { Confirm, Input, Select, MultiSelect, Toggle } = require("enquirer");
 const chalk = require("chalk");
 const fs_extra = require("fs-extra");
 const fs = require("fs");
 const path = require("path");
 const constants = require("./constants");
-const { addDependencies, generateFiles } = require("./utils");
+const { addDependencies, generateFiles, addScripts} = require("./utils");
 const { execSync } = require("child_process");
 
 console.log(__dirname);
@@ -66,19 +66,7 @@ const start = async () => {
   const usedPackagesPrompt = new MultiSelect({
     name: "usedPackages",
     message: "What packages do you want to use?",
-    choices: [
-      {
-        name: "@vkontakte/vk-tunnel",
-        value: { "@vkontakte/vk-tunnel": "0.1.3" },
-      },
-      { name: "eruda", value: { eruda: "2.8.3", "eruda-dom": "2.0.0" } },
-      { name: "recoil", value: { recoil: "0.7.6" } },
-      { name: "@happysanta/router", value: { "@happysanta/router": "0.3.1" } },
-      {
-        name: "@happysanta/bridge-plus",
-        value: { "@happysanta/bridge-plus": "0.0.24" },
-      },
-    ],
+    choices: constants.packages,
     result(names) {
       return [names, Object.values(this.map(names))];
       // [
