@@ -53,6 +53,10 @@ Go to created folder and run:
 | lint-staged                   | ^13.1.0 | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
 | prettier                      | ^2.8.3  | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
 
+#### No required dependencies?
+
+You can always write to [issues][issues] or create a [pull request][pulls].
+
 ## Contributors
 <a href="https://github.com/Tap-Team/create-vkma-ts/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Tap-Team/create-vkma-ts" />
@@ -62,3 +66,5 @@ Go to created folder and run:
 [npm-url]: https://npmjs.com/package/@tap_team/create-vkma-ts
 [mit]: https://img.shields.io/badge/License-MIT-yellow.svg
 [mit-url]: LICENSE
+[issues]: https://github.com/Tap-Team/create-vkma-ts/issues
+[pulls]: https://github.com/Tap-Team/create-vkma-ts/pulls
