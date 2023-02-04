@@ -1,8 +1,7 @@
-# Create VK Mini App with TypeScript [![npm][npm]][npm-url]
-
+# Create VK Mini App with TypeScript [![npm][npm]][npm-url] [![License: MIT][mit]][mit-url]
 ### Zero-config CLI generator for TypeScript VK mini app development.
 
-![](readme/demo.gif)
+![there should have been a demo gif here](readme/demo.gif)
 
 ## How to use
 
@@ -54,6 +53,12 @@ Go to created folder and run:
 | lint-staged                   | ^13.1.0 | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
 | prettier                      | ^2.8.3  | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
 
+## Contributors
+<a href="https://github.com/Tap-Team/create-vkma-ts/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Tap-Team/create-vkma-ts" />
+</a>
 
 [npm]: https://img.shields.io/npm/v/@tap_team/create-vkma-ts.svg
 [npm-url]: https://npmjs.com/package/@tap_team/create-vkma-ts
+[mit]: https://img.shields.io/badge/License-MIT-yellow.svg
+[mit-url]: LICENSE
