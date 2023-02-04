@@ -15,8 +15,8 @@ const addScripts = (file, isReactScripts) => {
       "react-scripts": "^4.0.3",
     }
     file.scripts = {
-      "start": "cross-env PORT=10888 react-scripts start",
-      "build": "react-scripts build",
+      "start": "cross-env PORT=10888 react-scripts --openssl-legacy-provider start",
+      "build": "react-scripts --openssl-legacy-provider build",
       ...file.scripts,
     }
   } else {
