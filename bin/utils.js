@@ -10,6 +10,10 @@ const {
 
 const addScripts = (file, isReactScripts) => {
   if (isReactScripts) {
+    file.devDependencies = {
+      ...file.devDependencies,
+      "react-scripts": "^4.0.3",
+    }
     file.scripts = {
       "start": "cross-env PORT=10888 react-scripts start",
       "build": "react-scripts build",
