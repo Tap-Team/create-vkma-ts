@@ -21,37 +21,38 @@ Go to created folder and run:
 
 ## Generated project dependencies
 
-| Dependencies                  | Version |              Is Dev              |             Optional             |
-|:------------------------------|:-------:|:--------------------------------:|:--------------------------------:|
-| @types/jest                   | 29.2.4  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @types/node                   | 17.0.45 |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @types/react                  | 17.0.52 |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @types/react-dom              | 17.0.18 |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @vitejs/plugin-react          | ^3.0.0  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @vkontakte/icons              | 2.14.0  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @vkontakte/vk-bridge          |  2.7.2  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @vkontakte/vk-miniapps-deploy | 0.0.26  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @vkontakte/vkjs               | 0.31.0  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| @vkontakte/vkui               |  5.1.0  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| react                         | ^17.0.0 |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| react-dom                     | ^17.0.0 |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| rollup                        | ^3.7.5  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| vite                          | ^4.0.2  |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| vite-plugin-singlefile        | ^0.13.2 |    <input type="checkbox" />     |    <input type="checkbox" />     |
-| recoil                        |  0.7.6  |    <input type="checkbox" />     | <input type="checkbox" checked/> |
-| @happysanta/router            |  0.3.1  |    <input type="checkbox" />     | <input type="checkbox" checked/> |
-| @happysanta/bridge-plus       | 0.0.24  |    <input type="checkbox" />     | <input type="checkbox" checked/> |
-| @babel/eslint-parser          | ^7.18.9 | <input type="checkbox" checked/> |    <input type="checkbox" />     |
-| @babel/preset-react           | ^7.18.6 | <input type="checkbox" checked/> |    <input type="checkbox" />     |
-| cross-env                     | ^7.0.3  | <input type="checkbox" checked/> |    <input type="checkbox" />     |
-| react-hot-loader              | ^4.13.0 | <input type="checkbox" checked/> |    <input type="checkbox" />     |
-| typescript                    | ^4.8.3  | <input type="checkbox" checked/> |    <input type="checkbox" />     |
-| react-scripts                 | ^4.0.3  | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
-| eruda                         |  2.8.3  | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
-| eruda-dom                     |  2.0.0  | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
-| husky                         | ^8.0.3  | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
-| lint-staged                   | ^13.1.0 | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
-| prettier                      | ^2.8.3  | <input type="checkbox" checked/> | <input type="checkbox" checked/> |
+| Dependencies                  | Version |          Is Dev          |         Optional         |
+|:------------------------------|:-------:|:------------------------:|:------------------------:|
+| @types/jest                   | 29.2.4  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @types/node                   | 17.0.45 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @types/react                  | 17.0.52 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @types/react-dom              | 17.0.18 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @vitejs/plugin-react          | ^3.0.0  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @vkontakte/icons              | 2.14.0  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @vkontakte/vk-bridge          |  2.7.2  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @vkontakte/vk-miniapps-deploy | 0.0.26  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @vkontakte/vkjs               | 0.31.0  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @vkontakte/vkui               |  5.1.0  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| react                         | ^17.0.0 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| react-dom                     | ^17.0.0 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| rollup                        | ^3.7.5  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| vite                          | ^4.0.2  | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| vite-plugin-singlefile        | ^0.13.2 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| recoil                        |  0.7.6  | <ul><li>- [ ] </li></ul> | <ul><li>- [x] </li></ul> |
+| @happysanta/router            |  0.3.1  | <ul><li>- [ ] </li></ul> | <ul><li>- [x] </li></ul> |
+| @happysanta/bridge-plus       | 0.0.24  | <ul><li>- [ ] </li></ul> | <ul><li>- [x] </li></ul> |
+| @babel/eslint-parser          | ^7.18.9 | <ul><li>- [x] </li></ul> | <ul><li>- [ ] </li></ul> |
+| @babel/preset-react           | ^7.18.6 | <ul><li>- [x] </li></ul> | <ul><li>- [ ] </li></ul> |
+| cross-env                     | ^7.0.3  | <ul><li>- [x] </li></ul> | <ul><li>- [ ] </li></ul> |
+| react-hot-loader              | ^4.13.0 | <ul><li>- [x] </li></ul> | <ul><li>- [ ] </li></ul> |
+| typescript                    | ^4.8.3  | <ul><li>- [x] </li></ul> | <ul><li>- [ ] </li></ul> |
+| react-scripts                 | ^4.0.3  | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
+| eruda                         |  2.8.3  | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
+| eruda-dom                     |  2.0.0  | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
+| husky                         | ^8.0.3  | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
+| lint-staged                   | ^13.1.0 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
+| prettier                      | ^2.8.3  | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
+
 
 #### No required dependencies?
 
