@@ -6,7 +6,12 @@ const fs_extra = require("fs-extra");
 const fs = require("fs");
 const path = require("path");
 const constants = require("./constants");
-const { addDependencies, generateFiles, addScripts, addPHELG} = require("./utils");
+const {
+  addDependencies,
+  generateFiles,
+  addScripts,
+  addPHELG,
+} = require("./utils");
 const { execSync } = require("child_process");
 
 console.log(__dirname);
@@ -61,11 +66,11 @@ const start = async () => {
     choices: ["npm", "yarn", "pnpm"],
   });
   const usedPackageManager = await usedPackageManagerPrompt.run();
-  
+
   const whatUsePrompt = new Toggle({
-    message: 'What use?',
-    enabled: 'react-scripts',
-    disabled: 'vite'
+    message: "What use?",
+    enabled: "react-scripts",
+    disabled: "vite",
   });
   const whatUse = await whatUsePrompt.run();
   appPackageJson = addScripts(appPackageJson, whatUse);
@@ -90,8 +95,10 @@ const start = async () => {
     )
   );
   generateFiles(usedPackagesNames, whatUse);
-  if (usedPackagesNames.indexOf("prettier+husky+editorconfig+lint-staged") !== -1) {
-    appPackageJson = addPHELG(appPackageJson)
+  if (
+    usedPackagesNames.indexOf("prettier+husky+editorconfig+lint-staged") !== -1
+  ) {
+    appPackageJson = addPHELG(appPackageJson);
   }
   fs.writeFileSync(
     path.join(__dirname, "../templates/dist/package.json"),

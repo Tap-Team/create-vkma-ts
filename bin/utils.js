@@ -13,19 +13,20 @@ const addScripts = (file, isReactScripts) => {
     file.devDependencies = {
       ...file.devDependencies,
       "react-scripts": "^4.0.3",
-    }
+    };
     file.scripts = {
-      "start": "cross-env PORT=10888 react-scripts --openssl-legacy-provider start",
-      "build": "react-scripts --openssl-legacy-provider build",
+      start:
+        "cross-env PORT=10888 react-scripts --openssl-legacy-provider start",
+      build: "react-scripts --openssl-legacy-provider build",
       ...file.scripts,
-    }
+    };
   } else {
     file.scripts = {
-      "start": "vite",
-      "build": "tsc && vite build",
-      "preview": "vite preview",
+      start: "vite",
+      build: "tsc && vite build",
+      preview: "vite preview",
       ...file.scripts,
-    }
+    };
   }
   return file;
 };
@@ -35,19 +36,20 @@ const addPHELG = (file) => {
   const root = path.resolve(__dirname, "../");
   file.scripts = {
     ...file.scripts,
-    "prepare": "husky install",
+    prepare: "husky install",
     "pre-commit": "lint-staged",
-    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,css,scss,md} --ignore-unknown"
-  }
+    prettier:
+      "prettier --write src/**/*.{js,jsx,ts,tsx,css,scss,md} --ignore-unknown",
+  };
   file["lint-staged"] = {
-    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write --ignore-unknown"
-  }
-  
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write --ignore-unknown",
+  };
+
   fs.copyFileSync(
     root + "/bin/generators/.prettierrc.json",
     root + "/templates/dist/.prettierrc.json"
   );
-  
+
   try {
     fs.mkdirSync(root + "/templates/dist/.husky");
   } catch (e) {}
@@ -55,18 +57,21 @@ const addPHELG = (file) => {
     root + "/bin/generators/.husky/pre-commit",
     root + "/templates/dist/.husky/pre-commit"
   );
-  
+
   fs.copyFileSync(
     root + "/bin/generators/.editorconfig",
     root + "/templates/dist/.editorconfig"
   );
-  
+
   return file;
-}
+};
 
 const addDependencies = (file, dependencies) => {
   dependencies.forEach((dependence) => {
-    if (dependence["eruda"] || dependence["prettier+husky+editorconfig+lint-staged"]) {
+    if (
+      dependence["eruda"] ||
+      dependence["prettier+husky+editorconfig+lint-staged"]
+    ) {
       file.devDependencies = {
         ...file.devDependencies,
         ...dependence,
@@ -90,12 +95,12 @@ const generateFiles = (dependenciesNames, isReactScripts) => {
   fs.writeFileSync(
     root + "/templates/dist/src/index.tsx",
     generate_indextsx(dependenciesNames),
-    { flag: "wx"},
+    { flag: "wx" }
   );
   fs.writeFileSync(
     root + "/templates/dist/src/App.tsx",
     generate_apptsx(dependenciesNames),
-    { flag: "wx" },
+    { flag: "wx" }
   );
 
   if (dependenciesNames.indexOf("eruda") !== -1) {
@@ -125,7 +130,7 @@ const generateFiles = (dependenciesNames, isReactScripts) => {
       }
     }
   );
-  
+
   if (isReactScripts) {
     try {
       fs.mkdirSync(root + "/templates/dist/public");
