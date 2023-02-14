@@ -17,11 +17,11 @@ ${
 }
 import { BasePanel } from '../../types/base';
 
-const Onboarding: React.FC<{BasePanel${
+const Onboarding: React.FC<BasePanel${
     dependencies.indexOf("@happysanta/router") !== -1
       ? ""
       : " & {setActiveView:  Dispatch<SetStateAction<string>>"
-  }}> = ({id${
+  }> = ({id${
     dependencies.indexOf("@happysanta/router") !== -1 ? "" : ", setActiveView"
   }}): JSX.Element => {
 
