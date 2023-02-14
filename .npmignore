@@ -10,3 +10,8 @@ node_modules
 *.log
 .npmignore
 readme
+./.prettierignore
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+SECURITY.md
