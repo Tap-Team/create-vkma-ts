@@ -3,6 +3,8 @@
 
 ![there should have been a demo gif here](readme/demo.gif)
 
+## [Demo app](https://vk.com/app51487367)
+
 ## How to use
 
 ### With NPX
