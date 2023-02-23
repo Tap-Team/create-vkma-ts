@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [react(), viteSingleFile()],
   server: {
     port: 10888
+  },
+  build: {
+    outDir: 'build'
   }
 })
