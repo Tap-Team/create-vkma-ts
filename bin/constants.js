@@ -11,7 +11,7 @@ module.exports = {
     },
     {
       name: "recoil",
-      value: { recoil: "0.7.6" },
+      value: { recoil: "0.7.7" },
     },
     {
       name: "@happysanta/router",

@@ -6,15 +6,15 @@ ${
     ? "import { BridgePlus } from '@happysanta/bridge-plus';"
     : "import bridge from '@vkontakte/vk-bridge';"
 }
-import App from './App';
+import App from './App';\
 ${
   dependencies.indexOf("@happysanta/router") !== -1
-    ? "import { RouterContext } from '@happysanta/router';\nimport { router } from './router';"
+    ? "\nimport { RouterContext } from '@happysanta/router';\nimport { router } from './router';"
     : ""
-}
+}\
 ${
   dependencies.indexOf("recoil") !== -1
-    ? "import { RecoilRoot } from 'recoil';"
+    ? "\nimport { RecoilRoot } from 'recoil';"
     : ""
 }
 
@@ -25,22 +25,22 @@ ${
     : "bridge.send('VKWebAppInit');"
 }
 
-ReactDOM.render(
+ReactDOM.render(\
    ${
      dependencies.indexOf("@happysanta/router") !== -1
-       ? "<RouterContext.Provider value={router}>"
+       ? "\n<RouterContext.Provider value={router}>"
        : ""
-   }
-       ${dependencies.indexOf("recoil") !== -1 ? "<RecoilRoot>" : ""}
-         <App />
-       ${dependencies.indexOf("recoil") !== -1 ? "</RecoilRoot>" : ""}
+   }\
+       ${dependencies.indexOf("recoil") !== -1 ? "\n<RecoilRoot>" : ""}
+         <App />\
+       ${dependencies.indexOf("recoil") !== -1 ? "\n</RecoilRoot>" : ""}\
     ${
       dependencies.indexOf("@happysanta/router") !== -1
-        ? "</RouterContext.Provider>"
+        ? "\n</RouterContext.Provider>"
         : ""
-    },
+    }
+    ,
 document.getElementById('root'));
-
 
 ${
   dependencies.indexOf("eruda") !== -1

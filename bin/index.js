@@ -10,7 +10,7 @@ const {
   addDependencies,
   generateFiles,
   addScripts,
-  addPHELG,
+  addPHELS,
 } = require("./utils");
 const { execSync } = require("child_process");
 
@@ -98,7 +98,7 @@ const start = async () => {
   if (
     usedPackagesNames.indexOf("prettier+husky+editorconfig+lint-staged") !== -1
   ) {
-    appPackageJson = addPHELG(appPackageJson);
+    appPackageJson = addPHELS(appPackageJson);
   }
   fs.writeFileSync(
     path.join(__dirname, "../templates/dist/package.json"),

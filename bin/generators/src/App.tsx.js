@@ -4,10 +4,10 @@ ${
   dependencies.indexOf("@happysanta/bridge-plus") !== -1
     ? "import { BridgePlus } from '@happysanta/bridge-plus';"
     : "import bridge from '@vkontakte/vk-bridge';"
-}
+}\
 ${
   dependencies.indexOf("@happysanta/router") !== -1
-    ? "import { useLocation, useRouter } from '@happysanta/router';"
+    ? "\nimport { useLocation, useRouter } from '@happysanta/router';"
     : ""
 }
 import {
@@ -18,11 +18,10 @@ import {
   SplitLayout,
   SplitCol, usePlatform, Root,
 } from '@vkontakte/vkui';
-import '@vkontakte/vkui/dist/vkui.css';
-
+import '@vkontakte/vkui/dist/vkui.css';\
 ${
   dependencies.indexOf("@happysanta/router") !== -1
-    ? "import { \n" +
+    ? "\nimport { \n" +
       "  PAGE_ONBOARDING,\n" +
       "  PANEL_MAIN, PANEL_ONBOARDING,\n" +
       "  VIEW_MAIN,\n" +
@@ -30,23 +29,22 @@ ${
       "} from './router';"
     : ""
 }
-
 import Main from './panels/main/Main';
 import Onboarding from './panels/onboarding/Onboarding';
 import {AppearanceType} from '@vkontakte/vk-bridge';
 
-const App = (): JSX.Element => {
-  const [appearance, setAppearance] = useState<AppearanceType>('light')
+const App = () => {
+  const [appearance, setAppearance] = useState<AppearanceType>('light')\
   ${
     dependencies.indexOf("@happysanta/router") !== -1
       ? ""
-      : "const [activeView, setActiveView] = useState('main_view')\n" +
-        "  const [activePanel, setActivePanel] = useState('panel_main')"
+      : "\n\tconst [activeView, setActiveView] = useState('main_view')\n" +
+        "\tconst [activePanel, setActivePanel] = useState('panel_main')"
   }
-
+  \
   ${
     dependencies.indexOf("@happysanta/router") !== -1
-      ? "const router = useRouter();\n" + "  const location = useLocation();"
+      ? "\n\tconst router = useRouter();\n" + "  const location = useLocation();"
       : ""
   }
   const platform = usePlatform();
@@ -114,10 +112,10 @@ const App = (): JSX.Element => {
                     dependencies.indexOf("@happysanta/router") !== -1
                       ? "VIEW_MAIN"
                       : "'main_view'"
-                  }}
+                  }}\
                   ${
                     dependencies.indexOf("@happysanta/router") !== -1
-                      ? "history={location.getViewHistory(VIEW_MAIN)}"
+                      ? "\n\t\t\t\t\t\t\t\t\thistory={location.getViewHistory(VIEW_MAIN)}"
                       : ""
                   }
                   activePanel={${
@@ -144,15 +142,16 @@ const App = (): JSX.Element => {
                       : "'panel_onboarding'"
                   }}
                 >
-                  <Onboarding id={${
+                  <Onboarding
+                    id={${
                     dependencies.indexOf("@happysanta/router") !== -1
                       ? "PANEL_ONBOARDING"
                       : "'panel_onboarding'"
-                  }}
+                  }}\
                     ${
                       dependencies.indexOf("@happysanta/router") !== -1
                         ? ""
-                        : "setActiveView={setActiveView}"
+                        : "\n\t\t\t\t\t\t\t\t\t\tsetActiveView={setActiveView}"
                     }
                   />
                 </View>

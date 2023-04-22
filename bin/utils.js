@@ -32,7 +32,7 @@ const addScripts = (file, isReactScripts) => {
 };
 
 // PHELG - prettier + husky + editorconfig + lint-staged
-const addPHELG = (file) => {
+const addPHELS = (file) => {
   const root = path.resolve(__dirname, "../");
   file.scripts = {
     ...file.scripts,
@@ -149,7 +149,7 @@ const generateFiles = (dependenciesNames, isReactScripts) => {
 
 module.exports = {
   addScripts,
-  addPHELG,
+  addPHELS,
   addDependencies,
   generateFiles,
 };
