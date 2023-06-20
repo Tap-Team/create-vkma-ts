@@ -188,3 +188,4 @@ Temporary Items
 .apdisk
 
 .idea/
+/pnpm-lock.yaml
