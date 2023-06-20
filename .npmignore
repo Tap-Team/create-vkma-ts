@@ -4,7 +4,6 @@
 .eslintrc.json
 /.gitignore
 .npmignore
-readme
 /src
 /.husky
 .prettierignore
@@ -12,4 +11,3 @@ CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 LICENSE
 SECURITY.md
-readme
