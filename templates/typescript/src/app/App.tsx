@@ -82,6 +82,9 @@ const App = () => {
     const fetchUser = async () => {
       const user = await BridgePlus.getUserInfo();
       dispatch(setUser(user));
+      try {
+        routeNavigator.hidePopout();
+      } catch (e) {}
     };
 
     getTheme();
