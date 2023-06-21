@@ -1,0 +1,5 @@
+.badge_icon {
+  :global(.vkuiSimpleCell__badge) {
+    transform: translateY(-200%) translateX(-100%);
+  }
+}

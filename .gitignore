@@ -13,6 +13,8 @@
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
+/templates/typescript/node_modules
+
 ### Node template
 # Logs
 logs
@@ -186,3 +188,4 @@ Temporary Items
 .apdisk
 
 .idea/
+/pnpm-lock.yaml

@@ -1,6 +1,6 @@
 {
   "name": "@tap_team/create-vkma-ts",
-  "version": "2.4.6",
+  "version": "3.0.0",
   "description": "Zero-config CLI for TypeScript VK mini app development",
   "main": "bin/index.js",
   "license": "MIT",
@@ -20,7 +20,13 @@
     "create-vkma-ts": "./bin/index.js"
   },
   "scripts": {
-    "create": "node ./bin/index.js"
+    "create": "node ./bin/index.js",
+    "build": "node build.js",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx,css,scss,md} --ignore-unknown",
+    "lint": "eslint -c .eslintrc.json --ext .ts,.tsx src",
+    "lint:fix": "eslint -c .eslintrc.json --ext .ts,.tsx src --fix"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -35,7 +41,26 @@
     "fs-extra": "^11.1.0"
   },
   "devDependencies": {
-    "prettier": "2.8.1"
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "esbuild": "0.18.5",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "typescript": "^5.1.3"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,css,scss,md}": "prettier --write --ignore-unknown"
   },
   "files": [
     "bin",

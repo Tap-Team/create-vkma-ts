@@ -1,0 +1,15 @@
+.header {
+  :global(.vkuiPanelHeader__before){
+    min-width: 70px;
+    max-width: 70px;
+    :global(.vkuiSimpleCell) {
+      width: auto;
+    }
+  }
+  :global(.vkuiIcon) {
+    color: inherit;
+  }
+  * {
+    color: inherit;
+  }
+}
