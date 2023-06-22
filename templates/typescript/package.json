@@ -15,7 +15,7 @@
     "lint:fix": "eslint -c .eslintrc.json --ext .ts,.tsx src --fix"
   },
   "dependencies": {
-    "@happysanta/bridge-plus": "0.0.24",
+    "@tap_team/bridge-plus": "0.1.0",
     "@reduxjs/toolkit": "^1.9.5",
     "@vkontakte/icons": "2.43.0",
     "@vkontakte/vk-bridge": "2.7.4",

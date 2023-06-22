@@ -2,12 +2,13 @@ import React from 'react';
 
 import { Icon24SlidersVerticalOutline } from '@vkontakte/icons';
 import { useRouteNavigator } from '@vkontakte/vk-mini-apps-router';
-import { Avatar, Div, Panel, SimpleCell } from '@vkontakte/vkui';
+import { Div, Panel } from '@vkontakte/vkui';
 import { useSelector } from 'react-redux';
 
 import { BasePage } from '@/shared/model/basepage.model';
 import { RootState } from '@/shared/store/store';
 import HeaderPanel from '@/shared/ui/header/Header.panel';
+import UserCell from '@/features/user/ui/UserCell/UserCell';
 
 const Main: React.FC<BasePage> = ({ nav }) => {
   const routerNavigator = useRouteNavigator();
@@ -24,13 +25,12 @@ const Main: React.FC<BasePage> = ({ nav }) => {
       </HeaderPanel>
       <Div>
         {user && (
-          <SimpleCell
-            before={<Avatar src={user.photo_200} />}
-            href={'https://vk.com/id' + user.id}
-            subtitle={user.city?.title ?? 'Город не указан'}
-          >
-            {user.first_name} {user.last_name}
-          </SimpleCell>
+          <UserCell
+            photo_200={user.photo_200}
+            id={user.id}
+            first_name={user.first_name}
+            last_name={user.last_name}
+          />
         )}
       </Div>
     </Panel>

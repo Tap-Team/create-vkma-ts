@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-import bridge from '@vkontakte/vk-bridge';
+import { BridgePlus } from '@tap_team/bridge-plus';
 import { RouterProvider } from '@vkontakte/vk-mini-apps-router';
 import { Provider } from 'react-redux';
 
@@ -10,7 +10,7 @@ import { router } from '@/shared/routing/routes';
 import { store } from '@/shared/store/store';
 
 // Init VK  Mini App
-bridge.send('VKWebAppInit');
+BridgePlus.init();
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);

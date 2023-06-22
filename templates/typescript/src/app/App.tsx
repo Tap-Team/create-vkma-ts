@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { BridgePlus } from '@happysanta/bridge-plus';
+import { BridgePlus } from '@tap_team/bridge-plus';
 import bridge, { AppearanceType } from '@vkontakte/vk-bridge';
 import {
   useActiveVkuiLocation,
