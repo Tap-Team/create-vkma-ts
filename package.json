@@ -1,6 +1,6 @@
 {
   "name": "@tap_team/create-vkma-ts",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Zero-config CLI for TypeScript VK mini app development",
   "main": "bin/index.js",
   "license": "MIT",
